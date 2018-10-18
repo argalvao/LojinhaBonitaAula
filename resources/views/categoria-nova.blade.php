@@ -2,7 +2,7 @@
 
 @section('body')
     <h1>Nova categoria</h1>
-    <form action = "" method="">
+    <form action = "/categorias" method="POST">
         @csrf
         <div class = "form-group">        
             <label for="nome">Nome da Categoria</label>

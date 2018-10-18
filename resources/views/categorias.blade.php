@@ -12,7 +12,16 @@
     </tr>
   </thead>
   <tbody>
-    {{--e agora??--}}
+    @foreach($categorias as $c)
+      <tr>
+        <td>{{$c->id}}</td>
+        <td>{{$c->nome}}</td>
+        <td>
+          <a class = "btn btn-primary" href="/categorias/editar/{{$c->id}}">Editar</a>
+          <a class = "btn btn-danger" href="/categorias/apagar/{{$c->id}}">Excluir</a>
+        </td>
+      </tr>
+    @endforeach
   </tbody>
 </table>
 
